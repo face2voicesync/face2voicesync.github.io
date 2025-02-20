@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Face Generation Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Talking Face Generation Results</h1>
+        <p>Explore the outcomes of our talking face generation model.</p>
+    </header>
+
+    <section class="video-section">
+        <h2>Generated Talking Face Video</h2>
+        <video width="640" height="360" controls>
+            <source src="assets/generated.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section class="comparison-section">
+        <h2>Original vs Generated Comparison</h2>
+        <div class="video-comparison">
+            <div>
+                <h3>Original Video</h3>
+                <video width="300" height="200" controls>
+                    <source src="assets/0006_02.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div>
+                <h3>Generated Video</h3>
+                <video width="300" height="200" controls>
+                    <source src="assets/0006_02_frame_0_id01106_6SFpvp42pMA_00016.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="audio-section">
+        <h2>Input Audio</h2>
+        <audio controls>
+            <source src="assets/30025_00020_audio_tts_0_textnum_150.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <footer>
+        <p>© 2025 Talking Face Generation Project. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
