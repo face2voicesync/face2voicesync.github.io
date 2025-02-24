@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/Layout.astro
-title: Research Project Page Template
+title:  "Face2VoiceSync: Lightweight Face–Voice Consistency for Text–Driven Talking Face Generation"
 description: Simple project page template for your research paper, built with Astro and Tailwind CSS
 favicon: favicon.svg
 thumbnail: screenshot.png
@@ -10,6 +10,7 @@ import Layout from "../layouts/Layout.astro";
 
 import Header from "../components/Header.astro";
 import Video from "../components/Video.astro";
+import Audio from "../components/Audio.astro";
 import HighlightedSection from "../components/HighlightedSection.astro";
 import SmallCaps from "../components/SmallCaps.astro";
 import Figure from "../components/Figure.astro";
@@ -19,69 +20,30 @@ import YouTubeVideo from "../components/YouTubeVideo.astro";
 import LaTeX from "../components/LaTeX.astro";
 
 import outside from "../assets/outside.mp4";
+import video1 from "../assets/v1.mp4";
+import video2 from "../assets/v22.mp4";
+import video3 from "../assets/v3.mp4";
+import video4 from "../assets/v4.mp4";
+import audio1 from "../assets/a1.wav";
 import transformer from "../assets/transformer.webp";
 import Splat from "../components/Splat.tsx"
 
 import CodeBlock from "../components/CodeBlock.astro";
 import Table from "../components/Table.astro";
-export const components = {pre: CodeBlock, table: Table}
+export const components = {pre: CodeBlock, table: Table};
+import myImage from "../assets/figure1.png";
+
+
 
 <Header
   title={frontmatter.title}
   authors={[
-    {
-      name: "Roman Hauksson",
-      url: "https://roman.technology",
-      institution: "Independent",
-      notes: ["*", "†"],
-    },
-    {
-      name: "Author Two",
-      institution: "Institution Two",
-      notes: ["*", "†"],
-    },
-    {
-      name: "Author Three",
-      institution: "Institution Three",
-      notes: ["†"],
-    },
-    {
-      name: "Author Four",
-      institution: "Institution Four",
-    },
   ]}
-  conference="Conference Name"
+  conference="InterSpeech 2025"
   notes={[
-    {
-      symbol: "*",
-      text: "author note one",
-    },
-    {
-      symbol: "†",
-      text: "author note two",
-    },
+
   ]}
   links={[
-    {
-      name: "Paper",
-      url: "",
-      icon: "ri:file-pdf-2-line",
-    },
-    {
-      name: "Code",
-      url: "https://github.com/RomanHauksson/academic-project-astro-template",
-      icon: "ri:github-line",
-    },
-    {
-      name: "arXiv",
-      url: "",
-      icon: "academicons:arxiv",
-    },
-    {
-      name: "Bluesky",
-      url: "",
-      icon: "ri:bluesky-line"
-    }
   ]}
   />
 
@@ -91,32 +53,130 @@ export const components = {pre: CodeBlock, table: Table}
 
 ## Abstract
 
-This is a live demo for a template you can use to create a simple project page for your research paper. See the code for the template and instructions on how to use it yourself [here](https://github.com/RomanHauksson/academic-project-astro-template). It's made with the [Astro web framework](https://astro.build/) and styled with [Tailwind CSS](https://tailwindcss.com/). You write the content in [MDX](https://mdxjs.com/), which enables markdown formatting like **bold**, _italics_, and ~strikethrough~, as well as custom components like <SmallCaps>small caps.</SmallCaps>
 
+Recent studies in speech-driven talking face generation achieve promising results, but their reliance on fixed-driven speech limits further applications (e.g., face-voice mismatch). Thus, we extend the task to a more challenging setting: given a face image and text to speak, generating both talking face animation and its corresponding speeches. Accordingly, we propose a novel framework, Face2VoiceSync, with several novel contributions: 1) Voice-Face Alignment, ensuring generated voices match facial appearance; 2) Diversity \& Manipulation, enabling generated voice control over paralinguistic features space; 3) Efficient Training, using a lightweight VAE to bridge visual and audio large-pretrained models, with significantly fewer trainable parameters than existing methods; 4) New Evaluation Metric, fairly assessing the diversity and identity consistency. Experiments show Face2VoiceSync achieves both visual and audio state-of-the-art performances on a single 40GB GPU.
 </HighlightedSection>
 
 ## Figures
-
-Use the figure component to display images, videos, equations, or any other element, with an optional caption.
-
 <Figure
-    caption="Diagram of the transformer deep learning architecture."
+    caption="A framework comparison between Face2VoiceSync and other existing methods."
   >
-    <Image source={transformer} altText="Diagram of the transformer deep learning architecture." />
+    <Image source={myImage} altText="Diagram of the transformer deep learning architecture." />
 </Figure>
 
-## Two columns
+## Talking face generation results
 
 Use the two columns component to display two columns of content. In this example, the first column contains a figure with a YouTube video and the second column contains a figure with a custom [React](https://react.dev/) component. By default, they display side by side, but if the screen is narrow enough (for example, on mobile), they're arranged vertically.
 
-<TwoColumns>
-  <Figure slot="left" caption="Take a look at this YouTube video.">
-    <YouTubeVideo videoId="wjZofJX0v4M" />
-  </Figure>
-  <Figure slot="right" caption="Now look at this Gaussian Splat, rendered with a React component.">
-    <Splat client:idle />
-  </Figure>
-</TwoColumns>
+
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">original</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+
+        {/* 第二行: 音频播放器和文本描述 */}
+          <tr>
+              <td class="border p-2" colspan="2">
+                  <Audio 
+                      source={audio1} 
+                  />
+              </td>
+
+              <td class="border p-2" colspan="2">
+                  <p>This is a description or additional information...</p>
+              </td>
+          </tr>
+    </tbody>
+</table>
+
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">original</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={video2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+
+        {/* 第二行: 音频播放器和文本描述 */}
+          <tr>
+              <td class="border p-2" colspan="2">
+                  <Audio 
+                      source={audio1} 
+                  />
+              </td>
+
+              <td class="border p-2" colspan="2">
+                  <p>This is a description or additional information...</p>
+              </td>
+          </tr>
+    </tbody>
+</table>
+
+
+
 
 ## Heading levels
 
