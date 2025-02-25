@@ -29,6 +29,26 @@ import h2 from "../assets/hh2.mp4";
 import s2 from "../assets/ss2.mp4";
 import f2 from "../assets/ff2.mp4";
 
+import o3 from "../assets/oo3.mp4";
+import h3 from "../assets/hh3.mp4";
+import s3 from "../assets/ss3.mp4";
+import f3 from "../assets/ff3.mp4";
+
+import o4 from "../assets/oo4.mp4";
+import h4 from "../assets/hh4.mp4";
+import s4 from "../assets/ss4.mp4";
+import f4 from "../assets/ff4.mp4";
+
+import o5 from "../assets/oo5.mp4";
+import h5 from "../assets/hh5.mp4";
+import s5 from "../assets/ss5.mp4";
+import f5 from "../assets/ff5.mp4";
+
+import o6 from "../assets/oo6.mp4";
+import h6 from "../assets/hh6.mp4";
+import s6 from "../assets/ss6.mp4";
+import f6 from "../assets/ff6.mp4";
+
 import audio1 from "../assets/a1.wav";
 import transformer from "../assets/transformer.webp";
 import Splat from "../components/Splat.tsx"
@@ -157,6 +177,160 @@ Use the two columns component to display two columns of content. In this example
 
     </tbody>
 </table>
+
+
+
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">Same speech content</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                  <p>It's not a crazy ambition that I have to conquer the European market or anything like that. It feels like the right time and like it's something.</p>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={h3} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={s3} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={f3} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">Speech content</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                  <p>the drive-by shot at the beginning with incorrect and incomplete information, and then the memorized 25-second speech that is exactly what...</p>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={h4} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={s4} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={f4} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">Speech content</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                  <p> these goosebumps this is Mauna. You feel the Mauna in the room so that's what I hope fans and movie-going audiences around the world will take from seeing</p>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={h5} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={s5} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={f5} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">Speech content</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                  <p>With that one I play with my brother, there was four of us in the band and my brother played with me and he was a football player in college.</p>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={h6} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={s6} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={f6} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 
 
 
