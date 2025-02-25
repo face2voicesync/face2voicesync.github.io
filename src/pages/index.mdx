@@ -20,10 +20,16 @@ import YouTubeVideo from "../components/YouTubeVideo.astro";
 import LaTeX from "../components/LaTeX.astro";
 
 import outside from "../assets/outside.mp4";
-import video1 from "../assets/v1.mp4";
-import video2 from "../assets/v22.mp4";
-import video3 from "../assets/v3.mp4";
-import video4 from "../assets/v4.mp4";
+import o1 from "../assets/oo1.mp4";
+import h1 from "../assets/hh1.mp4";
+import s1 from "../assets/ss1.mp4";
+import f1 from "../assets/ff1.mp4";
+
+import o2 from "../assets/oo2.mp4";
+import h2 from "../assets/hh2.mp4";
+import s2 from "../assets/ss2.mp4";
+import f2 from "../assets/ff2.mp4";
+
 import audio1 from "../assets/a1.wav";
 import transformer from "../assets/transformer.webp";
 import Splat from "../components/Splat.tsx"
@@ -47,7 +53,6 @@ import myImage from "../assets/figure1.png";
   ]}
   />
 
-<Video source={outside} />
 
 <HighlightedSection>
 
@@ -85,42 +90,32 @@ Use the two columns component to display two columns of content. In this example
             {/* (R1, C1): 第一列视频，跨两行 */}
             <td class="border p-2" rowspan="2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={o1} class="w-full h-full object-cover" controls />
                 </div>
             </td>
 
             {/* 其他三列视频 */}
             <td class="border p-2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={h1} class="w-full h-full object-cover" controls />
                 </div>
             </td>
             <td class="border p-2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={s1} class="w-full h-full object-cover" controls />
                 </div>
             </td>
             <td class="border p-2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={f1} class="w-full h-full object-cover" controls />
                 </div>
             </td>
         </tr>
 
-        {/* 第二行: 音频播放器和文本描述 */}
-          <tr>
-              <td class="border p-2" colspan="2">
-                  <Audio 
-                      source={audio1} 
-                  />
-              </td>
 
-              <td class="border p-2" colspan="2">
-                  <p>This is a description or additional information...</p>
-              </td>
-          </tr>
     </tbody>
 </table>
+
 
 
 <table  class="table-fixed w-full border-collapse">
@@ -138,24 +133,68 @@ Use the two columns component to display two columns of content. In this example
             {/* (R1, C1): 第一列视频，跨两行 */}
             <td class="border p-2" rowspan="2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={o2} class="w-full h-full object-cover" controls />
                 </div>
             </td>
 
             {/* 其他三列视频 */}
             <td class="border p-2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={h2} class="w-full h-full object-cover" controls />
                 </div>
             </td>
             <td class="border p-2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={s2} class="w-full h-full object-cover" controls />
                 </div>
             </td>
             <td class="border p-2">
                 <div class="aspect-w-16 aspect-h-9">
-                    <Video source={video2} class="w-full h-full object-cover" controls />
+                    <Video source={f2} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+        </tr>
+
+
+    </tbody>
+</table>
+
+
+
+
+<table  class="table-fixed w-full border-collapse">
+    <tbody>
+        {/* 表格标题行 */}
+        <tr>
+            <th class="border p-2">original</th>
+            <th class="border p-2">Hallo</th>
+            <th class="border p-2">SadTalker</th>
+            <th class="border p-2">Face2VoiceSync</th>
+        </tr>
+
+        {/* 第一行: 4 个本地视频 (第一个视频跨两行) */}
+        <tr>
+            {/* (R1, C1): 第一列视频，跨两行 */}
+            <td class="border p-2" rowspan="2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={o1} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+
+            {/* 其他三列视频 */}
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={h1} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={s1} class="w-full h-full object-cover" controls />
+                </div>
+            </td>
+            <td class="border p-2">
+                <div class="aspect-w-16 aspect-h-9">
+                    <Video source={f1} class="w-full h-full object-cover" controls />
                 </div>
             </td>
         </tr>
@@ -175,45 +214,3 @@ Use the two columns component to display two columns of content. In this example
     </tbody>
 </table>
 
-
-
-
-## Heading levels
-
-Use headings to divide your content into sections.
-
-### Heading 3
-
-Go down a level to heading 3...
-
-#### Heading 4
-
-...and down again to heading 4.
-
-## LaTeX
-
-You can also add LaTeX formulas, rendered during the build process using [KaTeX](https://katex.org/) so they're quick to load for visitors of your project page. You can write them inline, like this: <LaTeX inline formula="a^2 + b^2 = c^2" />. Or, you can write them as a block:
-
-<LaTeX formula="\int_a^b f(x) dx" />
-
-## Tables
-
-You can add simple tables using [GitHub Flavored Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables):
-
-| Model | Accuracy | F1 score | Training time (hours) |
-| :--- | :---: | :---: | :---: |
-| BERT-base | 0.89 | 0.87 | 4.5 |
-| RoBERTa-large | 0.92 | 0.91 | 7.2 |
-| DistilBERT | 0.86 | 0.84 | 2.1 |
-| XLNet | 0.90 | 0.89 | 6.8 |
-
-## BibTeX citation
-
-```bibtex
-@misc{roman2024academic,
-  author = "{Roman Hauksson}",
-  title = "Academic Project Page Template",
-  year = "2024",
-  howpublished = "\url{https://research-template.roman.technology}",
-}
-```
