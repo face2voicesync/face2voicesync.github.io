@@ -8,12 +8,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon(), mdx(), react()],
-  outDir: 'dist',    // 确保输出目录为 dist
-  output: 'static',   // 生成静态站点
+  site: 'https://github.com/face2voicesync/face2voicesync.github.io/', // 确保正确的站点地址
+  outDir: 'dist',    // 输出目录为 dist
   base: '/',          // 设置基路径为根目录
-  build: {
-    format: 'directory' // 确保生成 dist/index.html
-  },
   markdown: {
     shikiConfig: {
       theme: "github-light"
